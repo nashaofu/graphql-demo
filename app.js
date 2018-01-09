@@ -16,7 +16,7 @@ database()
 
 app.use(koaLogger())
 app.use(koaParser())
-app.use(koaMount('/static/', koaStatic(path.join(__dirname, './static'))))
+app.use(koaMount('/', koaStatic(path.join(__dirname, './static'))))
 
 router.use('', GraphqlRouter.routes())
 app
